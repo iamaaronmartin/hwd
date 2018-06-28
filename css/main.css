@@ -1,0 +1,456 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+	background-color: rgba(255,123,18,0.15);
+	color: #26282A;
+	font-family: 'Yahoo Sans';
+	font-size: 13pt;
+	font-weight: 400;
+	line-height: 22pt;
+	text-rendering: optimizeLegibility;
+	}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: rgb(240,22,47);
+    color: #fff;
+    text-shadow: none;
+	}
+
+::selection {
+    background: rgb(240,22,47);
+    color: #fff;
+    text-shadow: none;
+	}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+	}
+
+
+audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+
+a {
+	border-bottom: 2px solid rgba(255,123,18,1);
+	color: #26282A;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: rgba(255,123,18,1);
+
+	-webkit-transition: 0.6s; /* Safari */
+	transition: 0.6s;
+	}
+
+nav {
+	background-color: rgba(0,0,0,1); /* For browsers that do not support gradients */    
+/*	background: -webkit-linear-gradient(45deg, #7699FC, #793CF8); /* For Safari 5.1 to 6.0 *!/
+	background: -o-linear-gradient(45deg, #7699FC, #793CF8); /* For Opera 11.1 to 12.0 *!/
+	background: -moz-linear-gradient(45deg, #7699FC, #793CF8); /* For Firefox 3.6 to 15 *!/
+	background: linear-gradient(45deg, #7699FC, #793CF8); /* Standard syntax (must be last) *!/*/
+
+	color: #fff;
+	font-size: 9pt;
+
+	left: 24px;
+	line-height: 1.35em;
+	overflow: scroll;
+	padding: 48px;
+	position: fixed;
+	top: 24px;
+	width: 204px;
+	z-index: 990;
+
+	-webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+	}
+	
+	nav:hover {
+		box-shadow: 0px 6px 48px rgba(0,0,0,0.5);
+		top: 12px;
+		left: 12px;
+		padding: 60px;
+		}
+
+	nav a {
+		border-bottom: 0px solid;
+		color: #fff;
+		text-decoration: none;
+		}
+
+		nav a:hover { background-color: #; }
+
+	nav h1 {
+		border-bottom: 1px solid #828C93;
+		font-family: 'Yahoo Sans';
+		font-weight: 700;
+		margin-bottom: 48px;
+		padding-bottom: 12px;
+		text-transform: uppercase;
+		}
+
+	nav ul {
+		display: block;
+		list-style: number;
+		margin: 0 0 24px;
+		padding: 0;
+		}
+
+		nav ul li {
+			font-family: 'Yahoo Sans';
+			font-weight: 700;
+			list-style: none;
+			margin-bottom: 24px;
+			padding: 0;
+			}
+
+			nav ul li ul {
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+				}
+
+				nav ul li ul li a {
+					color: #828C93;
+					}
+
+				nav ul li ul li {
+					color: #828C93;
+					font-weight: 400;
+					margin: 12px 0 12px;
+					padding: 0 0 0 0;
+					text-transform: none;
+					}
+
+				nav ul li:hover ul {
+					height: auto;
+					margin: 12px 0 12px;
+					opacity: 1;
+
+					-webkit-transition: 0.4s; /* Safari */
+					transition: 0.4s;
+					}
+
+
+		nav * li.coming {
+			opacity: 0.25;
+			text-decoration: line-through;
+			}
+
+	nav p {
+		color: #828C93;
+		}
+
+
+header {
+	height: 400px;
+	}
+
+	header > img[alt=words] {
+		left: 24px;
+		position: absolute;
+		top: 12px;
+		z-index: 993;
+		
+		-webkit-transition: 0.6s; /* Safari */
+		transition: 0.6s;
+		}
+
+		nav:hover ~ #wrapper > header > img[alt=words] {
+			-ms-transform: rotate(83deg); /* IE 9 */
+			-webkit-transform: rotate(83deg); /* Chrome, Safari, Opera */
+			transform: rotate(83deg);
+			}
+
+	header > img[alt=smile] {
+		height: 197px;
+		left: 125px;
+		position: absolute;
+		top: 113px;
+		width: 197px;
+		z-index: 992;
+		
+		-webkit-transition: 0.6s; /* Safari */
+		transition: 0.6s;
+		}
+
+		nav:hover ~ #wrapper > header > img[alt=smile] {
+			height: 229px;
+			left: 109px;
+			top: 97px;
+			width: 229px;
+
+			-ms-transform: rotate(-15deg); /* IE 9 */
+			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+			transform: rotate(-15deg);
+			}
+
+	header div {
+		background-color: rgba(255,123,18,1);
+		height: 48px;
+		left: -150px;
+		position: relative;
+		top: 150px;
+		width: 100%;
+		z-index: 991;
+
+		-webkit-transition: 0.4s; /* Safari */
+		transition: 0.4s;
+
+		-ms-transform: rotate(-15deg); /* IE 9 */
+		-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+		transform: rotate(-15deg);
+		}
+
+	nav:hover ~ #wrapper > header div {
+		box-shadow: 0px 48px 48px rgba(0,0,0,0.5);
+		-ms-transform: rotate(-10deg); /* IE 9 */
+		-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+		transform: rotate(-10deg);
+		}
+
+footer {
+	background-color: #26282A;
+	color: #30D3B6;
+	font-size: 9pt;
+	height: 52px;
+	left: 0;
+	padding: 24px;
+	position: fixed;
+	top: calc(100% - 100px);
+	width: 252px;
+	}
+
+div#wrapper {
+	color: #2D353E;
+	left: 364px;
+	min-width: 600px;
+	padding: 24px 48px 48px;
+	position: absolute;
+	width: 692px;
+	}
+
+article {
+	/*border-bottom: 1px solid #26282A;*/
+	margin-bottom: 96px;
+	/*padding-bottom: 96px;*/
+	padding-top: 24px;
+	}
+
+article h1 + p,
+article h2 + p,
+article h3 + p,
+article h4 + p,
+article h5 + p,
+article h6 + p,
+article img + p,
+article ol + p {
+	margin-top: 0;
+	margin-bottom: 0em;
+	text-indent: 0em !important;
+	}
+
+	article p {
+		margin-top: 0;
+		margin-bottom: 0em;
+		text-indent: 1em;
+		}
+
+	article em {
+		color: #828C93;
+		}
+
+	article p.start {
+		margin-top: 22pt;
+		text-indent: 0em;
+		}
+
+	article p:last-child {
+		margin-top: 0;
+		margin-bottom: 3em;
+		text-indent: 1em;
+		}
+
+	article p + img,
+	article img + p {
+		margin: 22pt 0;
+		}
+
+	article img.example {
+		clear: both;
+		display: block;
+		margin: 48px 0;
+		max-width: 700px;
+		width: calc(100% - 48px);
+
+		-webkit-transition: 0.4s; /* Safari */
+		transition: 0.4s;
+		}
+
+		article img.middle {
+			margin-left: -350px;
+			}
+
+		article img.example:hover {
+			box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+			}
+
+	article img.right {
+		float: right;
+		margin: 0 0 16px 16px;
+		}
+
+	article img[src$=".svg"] {
+		margin: 24px 0;
+		max-width: 900px;
+		width: 100%;
+		}
+
+	article h1 {
+		font-family: 'Yahoo Sans';
+		font-size: 48pt;
+		font-weight: 900;
+		line-height: 1em;
+		text-transform: none;
+		}
+
+	article h2 {	
+		color: rgba(255,123,18,1);
+		font-family: 'Yahoo Sans';
+		font-size: 16pt;
+		font-weight: 700;
+		line-height: 1.5em;
+		margin-bottom: 0em;
+		margin-top: 3em;
+		text-transform: uppercase;
+		}
+
+	article h3 {	
+		font-family: 'Yahoo Sans';
+		font-size: 16pt;
+		font-weight: 700;
+		line-height: 1.5em;
+		margin-bottom: 0em;
+		margin-top: 3em;
+		}
+
+	article h4 {
+		font-weight: 700;
+		margin-bottom: 0em;
+		}
+
+	article.coming {
+		color: rgba(45,53,62,0.35);
+		}
+
+	article hr {
+		border-color: #FF520D;
+		border-width: 8px;
+		margin-top: 5em;
+		/*margin-left: 48px;*/
+		width: 50%;
+		}
+
+	article hr.double {
+		border-color: #6D00F6;
+		border-width: 32px;
+		margin-top: 5em;
+		/*margin-left: 48px;*/
+		width: 50%;
+		}
+
+	article.coming hr {
+		display: block;
+		left: -75px;
+		position: relative;
+		top: 310px;
+		width: 804px;
+		
+		-ms-transform: rotate(45deg); /* IE 9 */
+		-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+		transform: rotate(45deg);
+		}
+
+	article.coming hr + hr {
+		top: 288px;
+		-ms-transform: rotate(-45deg); /* IE 9 */
+		-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+		transform: rotate(-45deg);
+		}
+
+	article h2 + ol,
+	article h2 + ul,
+	article h3 + ol,
+	article h3 + ul {
+		margin-top: 0 !important;
+		}
+
+	article ol {
+		counter-reset: ol-counter;
+		list-style-type: none;
+		margin-top: 0;
+		margin-left: -2em;
+		padding-left: 4em;
+		}
+
+	article p + ol {
+		margin-top: 1em;
+		}
+
+	ol li {
+		margin-left: -1.75em;
+		padding-left: 1.75em;
+		}
+
+	ol li:before {
+		color: rgba(255,123,18,1);
+		content: counter(ol-counter);
+		counter-increment: ol-counter;
+		display: inline-block;
+		font-family: 'Yahoo Sans';
+		font-weight: 900;
+		margin-left: -1.75em;
+		width: 1.75em;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

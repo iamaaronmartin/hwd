@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'BluuNext-Bold';
+	src:
+		url('../fonts/BluuNext-Bold.eot');
+	src:
+		url('../fonts/BluuNext-Bold.woff2') format('woff2'),
+		url('../fonts/BluuNext-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BluuNext-Bold.woff') format('woff');
+	font-style:   normal;
+	font-stretch: normal;
+	}
+
+.BluuNext-Bold {
+  font-family: 'BluuNext-Bold';
+  font-style:   normal;
+  font-stretch: normal;
+}
+
